@@ -5,6 +5,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext as _
 
 
+@admin.register(models.User)
 class UserAdmin(BaseUserAdmin):
     # List admins by id, email, name
     ordering = ['id']
@@ -29,6 +30,6 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
 
-
-# Register the admin.
-admin.site.register(models.User, UserAdmin)
+#
+# # Register the admin.
+# admin.site.register(models.User, UserAdmin)
